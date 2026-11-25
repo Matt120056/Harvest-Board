@@ -10,7 +10,7 @@ const donationQty = document.querySelector("#donation-qty");
 const donationMessage = document.querySelector("#donation-message");
 
 function filterItems() {
-  let search = searchInput.value.toLowerCase();
+  let search = searchInput.value.toLowerCase(); 
   let count = 0;
 
   items.forEach(function(item) {
