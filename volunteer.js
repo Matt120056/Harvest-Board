@@ -20,7 +20,7 @@ function addVolunteer(name, role) {
 volunteerForm.addEventListener("submit", (event) => {
   let volunteerName = nameInput.value.trim();
 
-  if (volunteerName = "") {
+  if (volunteerName === "") {
     volunteerMessage.textContent = "Please type your name first.";
     return;
   }
