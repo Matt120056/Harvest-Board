@@ -345,6 +345,7 @@ The empty-name validation bug gave no red Console message because the code used 
 
 ```text
 (validator result for index.html and volunteer.html)
+/Users/mattpheaton/Downloads/harvest-board-starter/screenshots
 ```
 
 ```text
@@ -353,24 +354,58 @@ The empty-name validation bug gave no red Console message because the code used 
 
 ```text
 (git log --oneline --graph | head, then git log --oneline | wc -l : expect 16)
+(base) ➜  harvest-board-starter git:(feature/harvest-board) ✗ git log --oneline --graph | head
+* b0cb28d Add Mission 4 volunteer bug report
+* bf4fbf7 Enforce five volunteer sign-up limit
+* 12129af Prevent volunteer form page reload
+* 8258ac5 Fix empty volunteer name validation
+* b0e2a71 Prevent HTML injection in volunteer names
+* e843305 Fix volunteer counter variable declaration
+* 3c7d29b Fix volunteer page script loading order
+* 00c05c6 Add pledge checkboxes and live tallies
+* 81b6a49 Finished script
+* 8bf9476 Added donation script
+
+
+(base) ➜  harvest-board-starter git:(feature/harvest-board) git log --oneline | wc -l        
+      16
 ```
 
-- Repository: https://github.com/...
-- Issue #1 (closed): https://github.com/...
-- Merged Pull Request: https://github.com/...
-- Release v1.0.0: https://github.com/...
+- Repository: https://github.com/Matt120056/Harvest-Board
+- Merged Pull Request: https://github.com/Matt120056/Harvest-Board/pull/1
+- Release v1.0.0: https://github.com/Matt120056/Harvest-Board/releases/tag/v1.0.0
 
 **Explain (what did Closes #1 do?):**
+Closes #1 automatically closed Issue #1 on GitHub when I merged my Pull Request. It connected the work I completed to the original issue.
 
 **Explain (git pull is a shortcut for which two commands?):**
+git pull is a shortcut for git fetch and git merge. Fetch downloads the latest changes from GitHub, and merge combines those changes with my current branch.
 
 ## Mission 6: Reflection
 
-1. **Events (my own analogy):**
-2. **Validation:**
-3. **Reading errors:**
-4. **Pick the right tool:** (a) ... (b) ... (c) ... (d) ... (e) ...
+1. **Events (my own analogy):** An event listener is like having someone watching a door and waiting for something to happen before taking action
+2. **Validation:** Checking === "" alone lets three spaces through because spaces are still characters, so the input is not technically empty.
+3. **Reading errors:** The message Cannot read properties of null means JavaScript tried to access something on an HTML element that it could not find. One cause I encountered was loading JavaScript before the HTML elements were available.
+4. **Pick the right tool:** (a) ... (b) ... (c) ... (d) ... (e) ... 
+(a) A button reloads the page: Use event.preventDefault() to stop the browser's default form submission behaviour.
+
+
+
+(b) The count shows NaN: Use the Console to inspect variables and check where an invalid number is being used.
+
+
+
+(c) See a variable's value in the middle of a loop: Use a breakpoint and the Scope panel to pause the code and inspect variables.
+
+
+
+(d) Cannot read properties of null and don't know which line caused it: Use the browser Console and error stack trace to locate the problem.
+
+
+
+(e) Check if HTML is valid: Use the W3C Markup Validator to find HTML errors.
 5. **Beyond class:**
+I could use a live filter and validated form in my Adventure Watch app. A live filter would allow users to search through motorcycle events, festivals, and hiking events, while a validated form would make sure users enter the required information when registering for an event. The JavaScript concept I still find least clear is how event listeners and callbacks work together, especially when different events trigger different functions.
 
 ## Bonus (optional): Level Up
 
