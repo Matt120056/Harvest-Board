@@ -9,7 +9,7 @@ const volunteerMessage = document.querySelector("#volunteer-message");
 const countText = document.querySelector("#volunteer-count");
 
 const maxSpots = 5;
-const filled = 0;
+let filled = 0;
 
 function addVolunteer(name, role) {
   const item = document.createElement("li");
