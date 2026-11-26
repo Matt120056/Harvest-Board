@@ -90,3 +90,7 @@ footer { padding: var(--spacing-unit); background-color: var(--color-surface); t
 @media (min-width: 1024px) {
   .item-list { grid-template-columns: repeat(3, 1fr); }
 }
+
+.done span {
+  text-decoration: line-through;
+}

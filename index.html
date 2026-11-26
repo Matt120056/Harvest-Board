@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Northern Harvest Food Bank</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -28,9 +29,9 @@
         <input type="text" id="item-search" name="q" placeholder="Try: rice">
         <button type="submit" class="btn">Search</button>
       </form>
-      <p id="item-count" aria-live="polite">6 items listed</p>
+      <p id="item-count" aria-live="polite">7 items listed</p>
       <p id="no-items" class="hidden">No items match that search</p>
-      <ul class="item-list">
+      <ul id="item-list">
         <li>
           <article class="card">
             <h3>Canned beans</h3>
@@ -71,6 +72,13 @@
             <h3>Peanut butter</h3>
             <p class="category">Protein</p>
             <p>Needed: 60 jars</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3>Yorkshire Pudding</h3>
+            <p class="category">Pantry</p>
+            <p>Needed: 30 servings</p>
           </article>
         </li>
       </ul>
