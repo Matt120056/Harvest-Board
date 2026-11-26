@@ -303,25 +303,42 @@ The total is a let because its value changes as pledges are added. The element v
 
 ```text
 (one red Console message I saw)
-
+5 of 5 spots filled
 ```
 
 **Breakpoint (one sentence: what did I see in the Scope panel, for example the values of filled and maxSpots, and what did it tell me?):**
+When I paused at the spots limit condition and pressed F10, the Scope panel showed filled = 5 and maxSpots = 5. This confirmed that all five volunteer spots were taken and the sixth sign-up should be blocked.
 
 ```text
 (#volunteer-count and #volunteer-list text after the final test)
+Matt Pheaton (Driver)<b>Ana</b> (Sorter)Carter S (Greeter)Rishabh S (Sorter)REZA S (Driver)
 ```
 
 ```text
 (git log --oneline)
+b0cb28d (HEAD -> feature/harvest-board) Add Mission 4 volunteer bug report
+bf4fbf7 Enforce five volunteer sign-up limit
+12129af Prevent volunteer form page reload
+8258ac5 Fix empty volunteer name validation
+b0e2a71 Prevent HTML injection in volunteer names
+e843305 Fix volunteer counter variable declaration
+3c7d29b Fix volunteer page script loading order
+00c05c6 Add pledge checkboxes and live tallies
+81b6a49 Finished script
+8bf9476 Added donation script
+ef57078 Add no results message and Enter key support
+f4ff673 Add live item filtering
+68c5d17 Add seventh food item and link finder script
 ```
 
 **Explain (which bug gave no red message, and how did I find it?):**
+The empty-name validation bug gave no red Console message because the code used = instead of ===. I found it by testing the form with an empty name and inspecting the if condition in volunteer.js, where I noticed the incorrect comparison operator.
 
 **Checkpoint 4 (expect 15):**
 
 ```text
-(paste)
+(base) ➜  harvest-board-starter git:(feature/harvest-board) ✗ git log --oneline | wc -l   
+      15
 ```
 
 ## Mission 5: Publish and Release
